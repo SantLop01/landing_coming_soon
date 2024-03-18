@@ -66,18 +66,19 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-/* Cooming Soon Section */
+/* coming Soon Section */
 
 main {
     position: relative;
 }
 
-main .cooming {
-    display: flex;
+main .coming {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     min-height: 100vh;
 }
 
-.cooming .content__left {
+.coming .content__left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,11 +94,11 @@ main .cooming {
     object-fit: cover;
 }
 
-.cooming .content__right {
+.coming .content__right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3% 6%;
+    padding: 12%;
     flex: 1;
 }
 
@@ -140,6 +141,7 @@ main .cooming {
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
+    width: 86%;
     height: 100%;
 }
 
@@ -156,7 +158,7 @@ main .cooming {
 
 .right__info .info__description {
     font-family: 'Utile-Regular', sans-serif;
-    font-size: 1.7em;
+    font-size: 1.4em;
     text-align: left;
     white-space: pre-line;
     line-height: 1.6;
@@ -175,10 +177,12 @@ main .cooming {
 
 .form__right input {
     font-family: 'Utile-Regular', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.4em;
     width: 100%;
     padding: 1.2rem 2.8rem;
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
+    border-right: unset;
+    background-color: var(--primary-bg-color);
     border-top-left-radius: 26px;
     border-bottom-left-radius: 26px;
     grid-column: 1 / 4;
@@ -191,7 +195,7 @@ main .cooming {
 }
 
 .form__right button {
-    font-size: 2.2em;
+    font-size: 1.8em;
     text-transform: uppercase;
     color: #fffbf4;
     background-color: var(--main-color);
@@ -217,14 +221,11 @@ main .cooming {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.2em;
-    color: #ededed;
-    padding: 4px;
-    background-color: #EB5055;
-    border-radius: 50%;
+    width: 34px;
+    height: 34px;
 }
 
-main .cooming .contact__wrap {
+main .coming .contact__wrap {
     position: fixed;
     right: 1%;
     bottom: 2%;
@@ -243,6 +244,21 @@ main .cooming .contact__wrap {
 }
 
 /* BREAKPOINTS */
+@media (max-width: 1100px) {
+    .right__info .info__description {
+        white-space: unset;
+    }
+}
+
+@media(max-width: 991px) {
+    .content__left .image__left img {
+        object-position: calc(100% - 38%);
+    }
+    .content__right .right__info {
+        width: 100%;
+    }
+}
+
 @media(max-width: 820px) {
     .idioms__item .idiom__btn iconify-icon {
         font-size: 2em;
@@ -251,17 +267,17 @@ main .cooming .contact__wrap {
         width: 60%;
     }
     .right__info .info__title {
-        font-size: 3.2em;
+        font-size: 3em;
     }
     .right__info .info__description {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .form__right input {
-        font-size: 1.3em;
+        font-size: 1.2em;
         padding: 1rem 2.4rem;
     }
     .form__right button {
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
     .social__list .social__item .social__link {
         font-size: 2em;
@@ -306,10 +322,11 @@ main .cooming .contact__wrap {
 }
 
 @media (max-width: 462px) {
-    main .cooming {
+    main .coming {
+        display: flex;
         flex-direction: column;
     }
-    .cooming .content__left {
+    .coming .content__left {
         flex: none;
         height: 100%;
     }
@@ -317,13 +334,20 @@ main .cooming .contact__wrap {
         aspect-ratio: 2/2;
         object-position: calc(100%) top;
     }
-    .cooming .content__right {
+    .coming .content__right {
         padding: 6% 6%;
     }
-    .cooming .content__right {
+    .coming .content__right {
         gap: 4rem;
     }
+    .right__info .info__description {
+        font-size: 1.4em;
+    }
     .form__right input {
+        font-size: 1.3em;
         padding: 1rem 1.6rem;
+    }
+    .form__right button {
+        font-size: 1.4em;
     }
 }
