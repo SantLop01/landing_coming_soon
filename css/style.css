@@ -75,7 +75,7 @@ main {
 main .coming {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .coming .content__left {
@@ -97,7 +97,7 @@ main .coming {
 .coming .content__right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 12%;
     flex: 1;
 }
@@ -139,10 +139,10 @@ main .coming {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2rem;
     width: 86%;
-    height: 100%;
+    margin-top: 12%;
 }
 
 .right__info .info__logo img {
@@ -173,6 +173,7 @@ main .coming {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
+    max-width: 410px;
 }
 
 .form__right input {
@@ -208,6 +209,7 @@ main .coming {
 .content__right .right__social {
     display: flex;
     width: 100%;
+    margin-top: 10%;
 }
 
 .right__social .social__list {
