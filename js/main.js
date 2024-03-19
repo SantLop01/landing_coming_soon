@@ -36,20 +36,27 @@ spanish.addEventListener('click', () => {
     // Redireccionando a redes
     instagram.href = 'https://www.instagram.com/back2italy.la/';
     linkedin.href = 'https://www.linkedin.com/company/back2italy';
-    whatsapp.href = 'https://wa.me/3904321510622';
+    whatsapp.href = 'https://wa.me/3904321510621';
 });
 
 italian.addEventListener('click', () => {
+    // Guardando el idioma
     localStorage.setItem('lang', 'it');
     if (spanish.className === 'idiom__btn active') {
         spanish.classList.remove('active');
     };
     italian.classList.add('active');
 
+    // Cambiando los textos
     title.textContent = it.title;
     description.innerHTML = it.description;
     description_contact.textContent = it.description_contact;
     send_text.textContent = it.send_text;
+
+    // Redireccionando a redes
+    instagram.href = 'https://www.instagram.com/back2italy/';
+    linkedin.href = 'https://www.linkedin.com/company/back2italy';
+    whatsapp.href = 'https://wa.me/3904321510622';
 });
 
 /* Obteniendo el idioma del localStorage */
